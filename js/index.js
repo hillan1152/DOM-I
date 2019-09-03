@@ -40,3 +40,82 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let bigImage = document.getElementById("cta-img");
+bigImage.setAttribute('src', siteContent['cta']['img-src'])
+
+let navigation = document.getElementsByTagName('a');
+navigation[0].textContent = "Services";
+navigation[1].textContent = "Product";
+navigation[2].textContent = "Vision";
+navigation[3].textContent = "Features";
+navigation[4].textContent = "About";
+navigation[5].textContent = "Contact";
+
+const headerText = document.querySelector('h1');
+headerText.textContent = 'DOM IS AWESOME';
+
+const button = document.querySelector('button');
+button.textContent = "Get Started";
+
+
+const headersArr = ['features', 'about', 'services', 'product', 'vision'];
+const contentHeaders = document.querySelectorAll('.text-content h4');
+contentHeaders.forEach((e, index) => {
+  e.textContent = siteContent['main-content'][`${headersArr[index]}-h4`];
+});
+
+const mainText = document.querySelectorAll('.text-content p');
+
+mainText[0].textContent = ('p', siteContent['main-content']['features-content']);
+
+mainText[1].textContent = ('p', siteContent['main-content']['about-content']);
+
+mainText[2].textContent = ('p', siteContent['main-content']['services-content']);
+
+mainText[3].textContent = ('p', siteContent['main-content']['product-content']);
+
+mainText[4].textContent = ('p', siteContent['main-content']['vision-content']);
+
+
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+// },
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
+// };
+
+
+const contactPage = document.querySelector('.contact h4');
+contactPage.textContent = siteContent['contact']['contact-h4'];
+
+const info = document.querySelectorAll('.contact p');
+info[0].textContent = siteContent['contact']['address'];
+info[1].textContent = siteContent['contact']['phone'];
+info[2].textContent = siteContent['contact']['email'];
+
+const footerPage = document.querySelector('footer p');
+footerPage.textContent = siteContent['footer']['copyright'];
+
+
+//new content
+document.querySelector('a').style.color = "green";
+
+const navElement = document.querySelector('nav');
+const newElement1 = document.createElement('a');
+const newElement2 = document.createElement('a');
+
+navElement.prepend(newElement1);
+navElement.appendChild(newElement2);
+
+newElement1.innerText = "Home";
+newElement2.innerText = "Affiliates";
