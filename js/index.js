@@ -105,3 +105,17 @@ info[2].textContent = siteContent['contact']['email'];
 
 const footerPage = document.querySelector('footer p');
 footerPage.textContent = siteContent['footer']['copyright'];
+
+
+//new content
+document.querySelector('a').style.color = "green";
+
+const navElement = document.querySelector('nav');
+const newElement1 = document.createElement('a');
+const newElement2 = document.createElement('a');
+
+navElement.prepend(newElement1);
+navElement.appendChild(newElement2);
+
+newElement1.innerText = "Home";
+newElement2.innerText = "Affiliates";
