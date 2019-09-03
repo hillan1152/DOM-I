@@ -58,7 +58,24 @@ headerText.textContent = 'DOM IS AWESOME';
 const button = document.querySelector('button');
 button.textContent = "Get Started";
 
+//ATTEMPT AT CLEAN CODE GONE WRONG
+const headersArr = ['features', 'about', 'services', 'product', 'vision'];
+const contentHeaders = document.querySelectorAll('.text-content h4');
+contentHeaders.forEach((e, index) => {
+  e.textContent = siteContent['main-content'][`${headersArr[index]}-h4`];
+});
 
+const mainText = document.querySelectorAll('.text-content p');
+
+mainText[0].textContent = ('p', siteContent['main-content']['features-content']);
+
+mainText[1].textContent = ('p', siteContent['main-content']['about-content']);
+
+mainText[2].textContent = ('p', siteContent['main-content']['services-content']);
+
+mainText[3].textContent = ('p', siteContent['main-content']['product-content']);
+
+mainText[4].textContent = ('p', siteContent['main-content']['vision-content']);
 
 
 
