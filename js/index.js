@@ -58,7 +58,7 @@ headerText.textContent = 'DOM IS AWESOME';
 const button = document.querySelector('button');
 button.textContent = "Get Started";
 
-//ATTEMPT AT CLEAN CODE GONE WRONG
+
 const headersArr = ['features', 'about', 'services', 'product', 'vision'];
 const contentHeaders = document.querySelectorAll('.text-content h4');
 contentHeaders.forEach((e, index) => {
@@ -81,3 +81,27 @@ mainText[4].textContent = ('p', siteContent['main-content']['vision-content']);
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+// },
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
+// };
+
+
+const contactPage = document.querySelector('.contact h4');
+contactPage.textContent = siteContent['contact']['contact-h4'];
+
+const info = document.querySelectorAll('.contact p');
+info[0].textContent = siteContent['contact']['address'];
+info[1].textContent = siteContent['contact']['phone'];
+info[2].textContent = siteContent['contact']['email'];
+
+const footerPage = document.querySelector('footer p');
+footerPage.textContent = siteContent['footer']['copyright'];
